@@ -74,10 +74,11 @@ app_license = "mit"
 # ----------
 
 # add methods and filters to jinja environment
-# jinja = {
-# 	"methods": "erp_utils.utils.jinja_methods",
-# 	"filters": "erp_utils.utils.jinja_filters"
-# }
+jinja = {
+	"methods": ["erp_utils.erp_utils.utils.generate_qrcode"],
+	# "methods": "erp_utils.utils.jinja_methods",
+	# "filters": "erp_utils.utils.jinja_filters"
+}
 
 # Installation
 # ------------
@@ -241,4 +242,3 @@ app_license = "mit"
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
-
