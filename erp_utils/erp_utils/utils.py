@@ -6,8 +6,8 @@ import math
 @frappe.whitelist()
 def generate_qrcode(text):
     data = pyqrcode.create(text)
-
-    return f'data:image/pngbase64,{data.png_as_base64_str(scale=5)}'
+            
+    return f'data:image/png;base64,{data.png_as_base64_str(scale=5)}'
 
 def convert_block(number, numberWords, teenWords, tensWords):
     if (number == 0):
