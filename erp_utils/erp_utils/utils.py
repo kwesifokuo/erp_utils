@@ -46,7 +46,7 @@ def convert(amount, mainCurrency, fractionCurrency, numberWords, teenWords, tens
 
         parts = str(round(amount, 2)).split('.')
         wholeNumber = int(parts[0], 10)
-        decimalPart = int(parts[1], 10)
+        decimalPart = int(parts[1], 10) if len(parts) > 1 else 0
 
         billion = math.floor(amount / 1000000000)
         million = math.floor((amount % 1000000000) / 1000000)
