@@ -75,7 +75,11 @@ app_license = "mit"
 
 # add methods and filters to jinja environment
 jinja = {
-	"methods": ["erp_utils.erp_utils.utils.generate_qrcode"],
+	"methods": [
+        "erp_utils.erp_utils.utils.generate_qrcode", 
+        "erp_utils.erp_utils.utils.generate_amount_to_words"
+        ],
+	# "methods": ["erp_utils.erp_utils.utils.generate_amount_to_words"],
 	# "methods": "erp_utils.utils.jinja_methods",
 	# "filters": "erp_utils.utils.jinja_filters"
 }
